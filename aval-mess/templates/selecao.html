@@ -1,0 +1,132 @@
+{% extends  "modelo.html" %}
+{% block conteudo %}
+<div class="introduction">
+     <h1>Estruturas de <span class="Codepythonspan">Seleção</span> em Python</h1>
+    <p class="text-introduction">
+        Esta seção foi preparada para abordar as estruturas de seleção presentes na linguagem Python
+    </p>
+    <p class="text-introduction">
+      As estruturas de seleção no Python podem ser divididas em 5 tipos: Sequencial, Seleção Simples, Seleção Composta, Encadeada Heterogênea, Encadeada Homogênea
+    </p>
+</div>
+<h2>Estrutura <span class="Codepythonspan">Sequencial</span></h2>
+<p class="text-introduction">
+  As ações são executadas de cima para baixo e da
+esquerda para a direita;
+</p>
+<p class="text-introduction">
+    Geralmente, o ponto-e-vírgula ";" finaliza uma
+    linha de ação, e como podemos ver, não é executada nenhuma escolha no codigo abaixo;
+</p>
+<div class = "code">
+    <code>
+        idade = int(input('Coloque sua idade');<br>
+        print (idade)
+    </code>
+</div>
+<h2>Estrutura de <span class="Codepythonspan">Seleção Simples</span></h2>
+<p class="text-introduction">
+  Uma estrutura de seleção permite a escolha de um bloco de ações a ser executado quando uma condição for satisfeita.
+</p>
+
+<div class = "code">
+    <code>
+        idade = int(input("Digite a sua idade: "))<br>
+
+if idade > 17:<br>
+    print("Pode entrar na festa!")
+    </code>
+</div>
+
+<p class="text-introduction">
+    Já aqui, fica notória a forma que o computador só vai printar a permissão caso uma exigência seja cumprida;
+    aqui somos apresentados ao <code>if</code>, básico da estrutura de seleção
+</p>
+
+<h2>Estrutura de <span class="Codepythonspan">Seleção Composta</span></h2>
+<p class="text-introduction">
+  Já a condição composta te deixa executar um bloco se a condição for verdadeira, e outro se for falsa. Usando <code>if</code> e <code>else</code>
+</p>
+<div class = "code">
+    <code>
+       idade = int(input("Digite a sua idade: "))<br>
+
+if idade > 18:<br>
+    print("Pode entrar na festa!")<br>
+else:<br>
+    print("É hora de voltar para sua casa")
+    </code>
+</div>
+
+<h2>Estrutura de Seleção Encadeada <span class="Codepythonspan">(Heterogênea)</span></h2>
+<p class="text-introduction">
+  A estrutura encadeada heterogênea é quando temos várias condições diferentes sendo testadas em sequência,
+    cada uma com um possível resultado diferente.
+</p>
+<p class="text-introduction">
+    Quando temos mais de dois caminhos possíveis para a lógica do programa é mais recomendado que usemos a cadeia Heterogênea.
+
+    A partir daqui somo introduzidos ao <code>elif</code> que ocorre quando não for nem <code>if</code> nem ,<code>else</code>
+</p>
+<div class = "code">
+    <code>
+        idade = int(input("Digite a sua idade: "))<br>
+
+        if idade > 17:<br>
+        print("Pode entrar na festa!")<br>
+
+        elif idade > 16 and idade < 18:<br>
+        print("É hora de voltar para sua casa")<br>
+
+        else:<br>
+
+        print("Vou chamar seus pais.")
+    </code>
+</div>
+
+<h2>Estrutura de Seleção Aninhada <span class="Codepythonspan">(Homogênea)</span></h2>
+<p class="text-introduction">
+  Chamamos de estrutura homogênea (ou "aninhada") quando uma estrutura de decisão está dentro de outra.
+</p>
+<p class="text-introduction">
+    Quando primeiro você verifica uma condição mais geral, e depois deseja aplicar refinamentos ou subcondições.
+    Torna-se mais recomendado o uso das estruturas de seleção Homogêneas
+</p>
+<div class = "code">
+    <code>
+        nota = float(input("Digite sua nota: "))<br>
+
+if nota >= 7:<br>
+    if nota >= 7 and nota <= 8:<br>
+        print('Bom trabalho!')<br>
+    elif nota > 8 and nota < 9:<br>
+        print('Excelente nota!')<br>
+    else:<br>
+        print('Maravilhosa sua nota!')<br>
+else:<br>
+    print('Precisa estudar um pouco mais!')
+    </code>
+</div>
+<h2>Match <span class="Codepythonspan">Cases</span></h2>
+<p class="text-introduction">
+  O match case é uma estrutura de seleção múltipla inspirada no switch case de outras linguagens (como C, Java, etc.) e
+permite comparar um valor específico com múltiplos padrões.
+</p>
+<p class="text-introduction">
+    Por exemplo, nesse código observamos uma sequência de diferentes respostas que combinam com diferentes casos.
+</p>
+<div class = "code">
+    <code>
+        dia = 1<br>
+
+        match dia:<br>
+            case 1:<br>
+                print("Dia útil!")<br>
+            case 2:<br>
+                print("Final de semana ou feriado!")<br>
+            case _:<br>
+                print(f"Valor {dia} inválido")
+    </code>
+</div>
+
+{% endblock %}

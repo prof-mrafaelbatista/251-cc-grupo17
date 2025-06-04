@@ -1,0 +1,117 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+
+<div class="introduction">
+    <h1>Trabalhando com <span class="Codepythonspan">Bibliotecas</span> em Python</h1>
+    <p class="text-introduction">
+        Uma das grandes vantagens da linguagem Python é a enorme quantidade de <strong>bibliotecas</strong> disponíveis, que facilitam o desenvolvimento de programas complexos com pouco código. Neste módulo, vamos explorar o que são bibliotecas, como utilizá-las e ver exemplos práticos.
+    </p>
+    <p class="text-introduction">
+        As bibliotecas contêm funções e ferramentas já prontas para resolver problemas comuns, como cálculos matemáticos, manipulação de arquivos, criação de gráficos, entre outros.
+    </p>
+</div>
+
+<h2>O que é uma <span class="Codepythonspan">Biblioteca</span>?</h2>
+<p class="text-introduction">
+    Uma biblioteca é um conjunto de códigos prontos, organizados em módulos, que podem ser reutilizados em diversos projetos. Em Python, podemos utilizar tanto bibliotecas nativas (já instaladas com o Python), quanto bibliotecas externas (que precisam ser instaladas).
+</p>
+
+<h2>Importando <span class="Codepythonspan">Bibliotecas</span></h2>
+<p class="text-introduction">
+    Para usar uma biblioteca em seu programa, é necessário importá-la utilizando a palavra-chave <code>import</code>.
+</p>
+<div class="code">
+    <code>
+        import math<br>
+        print(math.sqrt(25))  # Resultado: 5.0
+    </code>
+</div>
+<p class="text-introduction">
+    Nesse exemplo, usamos a biblioteca <code>math</code> para acessar a função <code>sqrt</code>, que retorna a raiz quadrada de um número.
+</p>
+
+<h2>Importando <span class="Codepythonspan">Elementos Específicos</span></h2>
+<p class="text-introduction">
+    Também é possível importar apenas partes de uma biblioteca, facilitando a escrita do código.
+</p>
+<div class="code">
+    <code>
+        from math import pi, pow<br>
+        print("Valor de pi:", pi)<br>
+        print("2 elevado ao quadrado:", pow(2, 2))
+    </code>
+</div>
+
+<h2>Bibliotecas <span class="Codepythonspan">Padrão</span> do Python</h2>
+<p class="text-introduction">
+    Python já vem com diversas bibliotecas instaladas por padrão. Algumas das mais utilizadas são:
+</p>
+<ul>
+  <li><strong>math</strong> – funções matemáticas;</li>
+  <li><strong>random</strong> – geração de números aleatórios;</li>
+  <li><strong>datetime</strong> – manipulação de datas e horários;</li>
+  <li><strong>os</strong> – interação com o sistema operacional;</li>
+  <li><strong>sys</strong> – informações e controle do sistema Python;</li>
+  <li><strong>statistics</strong> – cálculos estatísticos simples.</li>
+</ul>
+
+<h2>Exemplo com a biblioteca <span class="Codepythonspan">random</span></h2>
+<p class="text-introduction">
+    Vamos gerar um número aleatório entre 1 e 10:
+</p>
+<div class="code">
+    <code>
+        import random<br>
+        numero = random.randint(1, 10)<br>
+        print("Número sorteado:", numero)
+    </code>
+</div>
+
+<h2>Instalando <span class="Codepythonspan">Bibliotecas Externas</span></h2>
+<p class="text-introduction">
+    Além das bibliotecas nativas, existem milhares de bibliotecas externas criadas pela comunidade. Para instalá-las, usamos o gerenciador de pacotes <code>pip</code> no terminal:
+</p>
+<div class="code">
+    <code>
+        pip install nome_da_biblioteca
+    </code>
+</div>
+<p class="text-introduction">
+    Por exemplo, para instalar a biblioteca <code>requests</code> (usada para fazer requisições HTTP):
+</p>
+<div class="code">
+    <code>
+        pip install requests
+    </code>
+</div>
+
+<h2>Exemplo com a biblioteca <span class="Codepythonspan">requests</span></h2>
+<p class="text-introduction">
+    Veja um exemplo de como usar <code>requests</code> para acessar uma página da internet:
+</p>
+<div class="code">
+    <code>
+        import requests<br>
+        resposta = requests.get("https://api.github.com")<br>
+        print(resposta.status_code)
+    </code>
+</div>
+
+<h2>Dica: Use <span class="Codepythonspan">alias</span> para facilitar</h2>
+<p class="text-introduction">
+    Você pode usar apelidos (alias) para simplificar a chamada de bibliotecas:
+</p>
+<div class="code">
+    <code>
+        import numpy as np<br>
+        array = np.array([1, 2, 3])<br>
+        print(array)
+    </code>
+</div>
+
+<h2>Conclusão</h2>
+<p class="text-introduction">
+    Bibliotecas são ferramentas poderosas que expandem as funcionalidades do Python e agilizam o desenvolvimento. Saber importar, instalar e usar bibliotecas é essencial para qualquer programador que queira criar soluções mais completas e profissionais.
+</p>
+
+{% endblock %}

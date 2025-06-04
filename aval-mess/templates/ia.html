@@ -1,0 +1,21 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+<body>
+  <div class="minha-pagina">
+    <div class="chat-container">
+      <h2 class="chat-titulo">Chatbot Gemini 🤖 </h2>
+      <form method="POST" class="chat-form">
+        <textarea name="pergunta" rows="3" placeholder="Digite sua pergunta..." class="chat-textarea"></textarea>
+        <button type="submit" class="chat-submit-btn">Enviar</button>
+      </form>
+
+      {% if resposta %}
+      <div class="chat-resposta">
+        <strong>Resposta:</strong><br>
+        {{ resposta }}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</body>
+{% endblock %}

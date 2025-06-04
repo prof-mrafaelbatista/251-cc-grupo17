@@ -1,0 +1,110 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+
+<div class="introduction">
+  <h1>Análise de Dados com <span class="Codepythonspan">Python</span></h1>
+  <p class="text-introduction">
+    A análise de dados é o processo de inspecionar, limpar, transformar e modelar dados com o objetivo de descobrir informações úteis, tirar conclusões e apoiar a tomada de decisões. Python se destaca como uma das linguagens mais utilizadas nessa área por sua simplicidade, bibliotecas poderosas e comunidade ativa.
+  </p>
+</div>
+
+<h2>Por que usar <span class="Codepythonspan">Python</span> para Análise de Dados?</h2>
+<ul class="text-introduction">
+  <li>Fácil de aprender e com sintaxe intuitiva</li>
+  <li>Bibliotecas como <code>pandas</code>, <code>numpy</code>, <code>matplotlib</code> e <code>seaborn</code></li>
+  <li>Ampla comunidade e documentação</li>
+</ul>
+
+<h2>Ciclo de Vida da Análise de Dados</h2>
+<p class="text-introduction">
+  O ciclo de vida da análise de dados pode ser dividido em seis etapas principais. Abaixo, explicamos cada etapa com exemplos práticos em Python.
+</p>
+
+<h3>1. Carregar os Dados</h3>
+<p class="text-introduction">
+  A primeira etapa é importar os dados, geralmente de arquivos CSV, Excel, bancos de dados ou APIs.
+</p>
+<div class="code">
+  <code>
+    import pandas as pd<br>
+    df = pd.read_csv("dados.csv")<br>
+    print(df.head())
+  </code>
+</div>
+
+<h3>2. Explorar os Dados</h3>
+<p class="text-introduction">
+  Nesta fase, usamos estatísticas descritivas e visualizações para entender o comportamento dos dados.
+</p>
+<div class="code">
+  <code>
+    print(df.info())<br>
+    print(df.describe())<br>
+    print(df.columns)<br>
+    print(df["coluna_exemplo"].value_counts())
+  </code>
+</div>
+
+<h3>3. Limpar os Dados</h3>
+<p class="text-introduction">
+  Os dados geralmente vêm com erros, duplicações ou valores ausentes. Aqui, fazemos o tratamento desses problemas.
+</p>
+<div class="code">
+  <code>
+    df.drop_duplicates(inplace=True)<br>
+    df.dropna(subset=["coluna_importante"], inplace=True)<br>
+    df["coluna_numerica"].fillna(df["coluna_numerica"].mean(), inplace=True)
+  </code>
+</div>
+
+<h3>4. Transformar os Dados</h3>
+<p class="text-introduction">
+  A transformação prepara os dados para a análise. Isso pode incluir normalizações, criação de colunas e mudanças de tipo.
+</p>
+<div class="code">
+  <code>
+    df["nova_coluna"] = df["coluna1"] / df["coluna2"]<br>
+    df["categoria"] = df["categoria"].astype("category")<br>
+    df["data"] = pd.to_datetime(df["data"])
+  </code>
+</div>
+
+<h3>5. Analisar os Dados</h3>
+<p class="text-introduction">
+  Com os dados limpos e transformados, podemos realizar análises mais profundas, como correlações, agrupamentos e visualizações.
+</p>
+<div class="code">
+  <code>
+    import seaborn as sns<br>
+    import matplotlib.pyplot as plt<br><br>
+
+    sns.histplot(df["coluna_numerica"], kde=True)<br>
+    plt.title("Distribuição dos dados")<br>
+    plt.show()
+  </code>
+</div>
+<div class="code">
+  <code>
+    df.groupby("categoria")["vendas"].sum().plot(kind="bar")<br>
+    plt.title("Vendas por Categoria")<br>
+    plt.show()
+  </code>
+</div>
+
+<h3>6. Salvar ou Exportar os Dados</h3>
+<p class="text-introduction">
+  Após a análise, podemos salvar os resultados para compartilhamento ou uso posterior.
+</p>
+<div class="code">
+  <code>
+    df.to_csv("dados_limpos.csv", index=False)<br>
+    df.to_excel("relatorio.xlsx", sheet_name="Resumo")
+  </code>
+</div>
+
+<h2>Conclusão</h2>
+<p class="text-introduction">
+  Python é uma linguagem ideal para análise de dados por unir simplicidade com bibliotecas poderosas. Com o ciclo de vida bem estruturado, é possível transformar dados brutos em insights valiosos que auxiliam na tomada de decisões.
+</p>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends  "modelo.html" %}
+{% block conteudo %}
+    <h1>Excluir <span class="Codepythonspan">Termo</span></h1>
+
+<form action="{{ url_for('remover_termo')}}" method="post">
+<div class="mb-3">
+<label for= 'termo' class="form-label">Termo</label>
+<input class="form-control" id="termo" name="termo" required>
+<div id="termoHelp" class="form-text">Termo para ser excluido.</div>
+</div>
+<button type="submit" class="btn btn-primary">Excluir</button>
+</form>
+{% endblock %}

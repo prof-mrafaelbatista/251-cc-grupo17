@@ -1,0 +1,8 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+<h2><span class="Codepythonspan">Pesquisa </span>não encontrada 😵‍💫.</h2>
+<p class="text-introduction">Parece que não temos esse termo aqui na busca! Pesquisa de novo, ou volta para a página inicial</p>
+    <form action="{{ url_for('index') }}" method="get">
+        <button type="submit">Voltar ao Início</button>
+    </form>
+{% endblock %}

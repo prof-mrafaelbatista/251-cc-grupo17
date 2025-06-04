@@ -1,0 +1,168 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+
+<div class="introduction">
+  <h1>Funções e Procedimentos em <span class="Codepythonspan">Python</span></h1>
+  <p class="text-introduction">
+    Em Python, subprogramas são blocos de código reutilizáveis que ajudam na organização, modularização e legibilidade de programas. Subprogramas podem ser funções ou procedimentos:
+  </p>
+  <ul class="text-introduction">
+    <li><strong>Funções:</strong> retornam um valor após a execução.</li>
+    <li><strong>Procedimentos:</strong> executam uma ação, mas não retornam um valor.</li>
+  </ul>
+</div>
+
+<h2>Por que usar Subprogramas?</h2>
+<ul class="text-introduction">
+  <li><strong>Reutilização:</strong> evita repetição de código.</li>
+  <li><strong>Modularidade:</strong> facilita manutenção e organização.</li>
+  <li><strong>Abstração:</strong> permite pensar em tarefas como unidades.</li>
+  <li><strong>Colaboração:</strong> equipes podem trabalhar em funções separadas.</li>
+</ul>
+
+<h2>Funções em Python</h2>
+<p class="text-introduction">As funções em Python são definidas com a palavra-chave <code>def</code> e podem ou não receber parâmetros.</p>
+<div class="code">
+  <code>
+    def somar(a, b):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return a + b<br><br>
+    resultado = somar(5, 3)<br>
+    print(resultado)  # Saída: 8
+  </code>
+</div>
+
+<h2>Exemplo de Procedimento</h2>
+<p class="text-introduction">Procedimentos são funções que não retornam valor, mas realizam ações.</p>
+<div class="code">
+  <code>
+    def saudacao():<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print("Bem-vindo ao sistema!")<br><br>
+    saudacao()  # Saída: Bem-vindo ao sistema!
+  </code>
+</div>
+
+<h2>Função Principal com Condição</h2>
+<p class="text-introduction">Python utiliza o bloco <code>if __name__ == '__main__'</code> para executar o código principal.</p>
+<div class="code">
+  <code>
+    def funcao_principal():<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;for i in range(1000, 2001):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if i % 11 == 5:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"Este valor {i} -> tem resto 5")<br><br>
+    if __name__ == '__main__':<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;funcao_principal()
+  </code>
+</div>
+<p class="text-introduction">Essa função percorre os números de 1000 a 2000 e imprime apenas aqueles cujo resto da divisão por 11 seja 5.</p>
+<p class="text-introduction">A estrutura <code>if __name__ == '__main__'</code> garante que a função <code>funcao_principal</code> seja executada apenas se o script for executado diretamente (não importado como módulo).</p>
+<h2>Exemplos de Funções Integradas</h2>
+<p class="text-introduction">Python possui diversas funções integradas úteis:</p>
+<div class="code">
+  <code>
+    print("Olá, mundo!")<br>
+    nome = input("Digite seu nome: ")<br>
+    print(type("64"))<br>
+    print(int(3.15))<br>
+    print(float(32))<br>
+    print(str(3.14))
+  </code>
+</div>
+
+<h2>Importação de Bibliotecas</h2>
+<p class="text-introduction">Bibliotecas oferecem funções extras que podem ser importadas no programa.</p>
+<div class="code">
+  <code>
+    import random<br>
+    import math<br>
+    import re<br>
+    import datetime
+  </code>
+</div>
+
+<h3>Importando Funções Específicas</h3>
+<div class="code">
+  <code>
+    from random import randint<br>
+    from math import pi<br>
+    from bs4 import BeautifulSoup<br>
+    from urllib.request import urlopen
+  </code>
+</div>
+
+<h2>Criação de Funções</h2>
+<p class="text-introduction">A sintaxe básica para criar uma função em Python:</p>
+<div class="code">
+  <code>
+    def nome_da_funcao(parâmetros):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;# Bloco de comandos<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return resultado
+  </code>
+</div>
+
+<h2>Escopo de Variáveis</h2>
+<p class="text-introduction">
+  O escopo define onde uma variável pode ser acessada. Existem dois tipos:
+</p>
+<ul class="text-introduction">
+  <li><strong>Local:</strong> variável definida dentro de uma função, acessível apenas lá.</li>
+  <li><strong>Global:</strong> variável definida fora das funções, acessível por todo o código.</li>
+</ul>
+
+<h3>Exemplo de Variável Local</h3>
+<div class="code">
+  <code>
+    def minha_funcao():<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;mensagem = "Eu sou local!"<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print(mensagem)<br><br>
+    minha_funcao()  # Saída: Eu sou local!
+  </code>
+</div>
+
+<h3>Exemplo de Variável Global</h3>
+<div class="code">
+  <code>
+    mensagem = "Eu sou global!"<br><br>
+    def minha_funcao():<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print(mensagem)<br><br>
+    minha_funcao()  # Saída: Eu sou global!
+  </code>
+</div>
+
+<h2>Parâmetros e Argumentos</h2>
+<p class="text-introduction">
+  Parâmetros são variáveis definidas na declaração da função. Argumentos são os valores passados ao chamar a função.
+</p>
+<div class="code">
+  <code>
+    def apresentar(nome):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print(f"Olá, {nome}!")<br><br>
+    apresentar("Ana")  # Saída: Olá, Ana!
+  </code>
+</div>
+
+<h2>Mais Exemplos de Funções</h2>
+<p class="text-introduction">Exemplos práticos ajudam na fixação do conteúdo.</p>
+<div class="code">
+  <code>
+    def dobro(numero):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return numero * 2<br><br>
+    print(dobro(7))  # Saída: 14
+  </code>
+</div>
+<div class="code">
+  <code>
+    def verificar_par(n):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if n % 2 == 0:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return True<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return False<br><br>
+    print(verificar_par(10))  # Saída: True
+  </code>
+</div>
+
+<h2>Conclusão</h2>
+<p class="text-introduction">
+  Funções e procedimentos são fundamentais na construção de programas em Python. Eles tornam o código mais organizado, reutilizável e fácil de entender. Aprender a utilizá-los corretamente é essencial para quem está começando na programação.
+</p>
+
+{% endblock %}

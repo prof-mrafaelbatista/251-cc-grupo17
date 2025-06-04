@@ -1,0 +1,29 @@
+{% extends "modelo.html" %}
+
+{% block conteudo %}
+<div class="cabecalho">
+    <img src="{{ url_for('static', filename='messias.jpg') }}" class="foto-perfil">
+    <h1>Usuário</h1>
+    <p class="sub-titulo"><i>Aluno Python</i></p>
+</div>
+
+<section id="sobre" class="sobre">
+    <h2 class="sobre-titulo">Sobre mim</h2>
+    <div class="sobre-caixa">
+        <p class="sobre-paragrafo">
+            Bem-vindo à sua página de usuário. Aqui você pode visualizar e atualizar informações do seu perfil.
+        </p>
+        <form method="POST" class="conta-form">
+        <textarea name="escreva" rows="3" placeholder="Fale sobre você..." class="conta-textarea"></textarea>
+        <button type="submit" class="conta-submit-btn">Enviar</button>
+      </form>
+
+      {% if texto_usuario %}
+        <div class="sobre-user">
+          <strong class="sobre-mim" >Sobre Mim:</strong><br>
+          <p class="data-sobre">{{ texto_usuario }}</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

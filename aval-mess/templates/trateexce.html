@@ -1,0 +1,116 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+
+<div class="introduction">
+    <h1>Tratamento de <span class="Codepythonspan">Exceções</span> em Python</h1>
+    <p class="text-introduction">
+        Durante a execução de um programa, é comum que erros inesperados aconteçam, como dividir um número por zero ou tentar acessar um índice inexistente em uma lista. Esses erros são chamados de <strong>exceções</strong>, e o Python possui mecanismos para lidar com eles de forma elegante e segura.
+    </p>
+    <p class="text-introduction">
+        O tratamento de exceções permite que o programa continue funcionando mesmo quando um erro ocorre, evitando que ele seja encerrado de forma abrupta. Isso é essencial para criar aplicações robustas e confiáveis.
+    </p>
+</div>
+
+<h2>Compreendendo uma <span class="Codepythonspan">Exceção</span></h2>
+<p class="text-introduction">
+    Uma exceção é uma situação fora do comum que ocorre durante a execução do programa. Quando o Python encontra um erro, ele gera uma exceção. Se ela não for tratada, o programa é encerrado com uma mensagem de erro.
+</p>
+<p class="text-introduction">
+    Veja um exemplo simples onde ocorre uma exceção:
+</p>
+<div class="code">
+    <code>
+        numero = int(input("Digite um número: "))<br>
+        resultado = 10 / numero<br>
+        print("Resultado:", resultado)
+    </code>
+</div>
+<p class="text-introduction">
+    Se o usuário digitar 0, o programa tentará dividir por zero e causará uma exceção do tipo <code>ZeroDivisionError</code>.
+</p>
+
+<h2>Usando o <span class="Codepythonspan">try/except</span></h2>
+<p class="text-introduction">
+    Para evitar que o programa seja interrompido com um erro, usamos a estrutura <code>try/except</code>. O código dentro do bloco <code>try</code> é executado normalmente. Se uma exceção ocorrer, o Python pula para o bloco <code>except</code>.
+</p>
+<div class="code">
+    <code>
+        try:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;numero = int(input("Digite um número: "))<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;resultado = 10 / numero<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print("Resultado:", resultado)<br>
+        except ZeroDivisionError:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print("Erro: divisão por zero não é permitida.")
+    </code>
+</div>
+<p class="text-introduction">
+    Agora, se o usuário digitar 0, o programa não será interrompido, e uma mensagem amigável será exibida.
+</p>
+
+<h2>Tratando <span class="Codepythonspan">Múltiplas Exceções</span></h2>
+<p class="text-introduction">
+    Podemos tratar diferentes tipos de erros com blocos <code>except</code> específicos, ou com um bloco genérico para qualquer exceção.
+</p>
+<div class="code">
+    <code>
+        try:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;valor = int(input("Digite um número inteiro: "))<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print("Você digitou:", valor)<br>
+        except ValueError:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print("Erro: você deve digitar um número inteiro.")<br>
+        except Exception as erro:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print("Ocorreu um erro inesperado:", erro)
+    </code>
+</div>
+<p class="text-introduction">
+    O primeiro <code>except</code> trata especificamente o erro de conversão. Já o segundo pega qualquer outro tipo de erro que possa ocorrer.
+</p>
+
+<h2>Usando <span class="Codepythonspan">else</span> e <span class="Codepythonspan">finally</span></h2>
+<p class="text-introduction">
+    Podemos complementar o bloco <code>try</code> com <code>else</code> e <code>finally</code>:
+</p>
+<ul>
+    <li><strong>else</strong>: é executado se nenhum erro ocorrer;</li>
+    <li><strong>finally</strong>: sempre é executado, com ou sem erro.</li>
+</ul>
+<div class="code">
+    <code>
+        try:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;num = int(input("Digite um número positivo: "))<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;if num < 0:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;raise ValueError("Número negativo")<br>
+        except ValueError as e:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print("Erro:", e)<br>
+        else:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print("Número aceito!")<br>
+        finally:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print("Execução finalizada.")
+    </code>
+</div>
+<p class="text-introduction">
+    O bloco <code>finally</code> é útil, por exemplo, para fechar arquivos ou conexões, mesmo que ocorra um erro no programa.
+</p>
+
+<h2>Lançando Exceções com <span class="Codepythonspan">raise</span></h2>
+<p class="text-introduction">
+    Em algumas situações, podemos querer forçar um erro para interromper o fluxo normal do programa. Para isso, usamos o comando <code>raise</code>.
+</p>
+<div class="code">
+    <code>
+        idade = int(input("Digite sua idade: "))<br>
+        if idade < 0:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;raise ValueError("Idade não pode ser negativa!")<br>
+        print("Idade registrada com sucesso.")
+    </code>
+</div>
+<p class="text-introduction">
+    O <code>raise</code> permite lançar manualmente uma exceção, útil para impor regras no programa.
+</p>
+
+<h2>Conclusão</h2>
+<p class="text-introduction">
+    O tratamento de exceções é um recurso essencial da linguagem Python. Com ele, podemos tornar nossos programas mais seguros, evitando que pequenos erros interrompam grandes processos. Use sempre que trabalhar com entradas do usuário, arquivos, conexões ou operações críticas.
+</p>
+
+{% endblock %}

@@ -1,0 +1,172 @@
+{% extends  "modelo.html" %}
+{% block conteudo %}
+
+<div class="introduction">
+    <h1>Para <span class="Codepythonspan">Iniciantes</span></h1>
+   <p class="text-introduction">
+    Nesta seção, vamos apresentar a linguagem Python de forma clara e acessível para quem está começando agora na programação.
+    </p>
+    <p class="text-introduction">
+        Python é uma linguagem muito usada e poderosa. Ela permite que você crie programas para fazer cálculos, interagir com o usuário, criar jogos, automatizar tarefas e muito mais. Vamos aprender os primeiros passos de forma prática e simples.
+    </p>
+    <p class="text-introduction">
+        Vamos abordar os conceitos básicos, como valores, variáveis, comandos e estruturas. Com isso, você será capaz de entender o funcionamento da linguagem e criar seus primeiros códigos.
+    </p>
+</div>
+
+<h2>Conceitos <span class="Codepythonspan">Iniciais</span></h2>
+    <p class="text-introduction">
+        Imagine que você quer ensinar algo ao computador. Para isso, você precisa usar uma linguagem que ele entenda. Essa linguagem é o Python.
+    </p>
+    <p class="text-introduction">
+        Programar é escrever instruções que dizem ao computador o que fazer. E como ele não entende português, usamos Python para nos comunicar com ele.
+    </p>
+    <div class="code">
+        <code>
+            print('Olá Mundo')
+        </code>
+    </div>
+    <p class="text-introduction">
+        Esse comando faz o computador mostrar a mensagem "Olá Mundo" na tela. O "print" é usado para imprimir algo no terminal.
+    </p>
+    <p class="text-introduction">
+        Para escrever seus códigos, você pode usar um programa chamado IDE (Ambiente de Desenvolvimento Integrado). Ele ajuda você a escrever, testar e organizar seus códigos.
+    </p>
+    <p class="text-introduction">
+        Algumas IDEs famosas para Python são o Visual Studio Code e o PyCharm.
+    </p>
+
+<h2>Comandos <span class="Codepythonspan">Básicos</span></h2>
+    <p class="text-introduction">
+        Alguns comandos e tipos de dados são essenciais para começar a programar em Python:
+    </p>
+    <ul>
+        <li><strong>print</strong>: exibe mensagens na tela.</li>
+        <li><strong>#</strong>: usado para fazer comentários (o computador ignora).</li>
+    </ul>
+    <p class="text-introduction">
+        Tipos de valores em Python:
+    </p>
+    <ul>
+        <li><strong>int</strong>: números inteiros (ex: 1, 2, 3)</li>
+        <li><strong>float</strong>: números decimais (ex: 3.14, 2.5)</li>
+        <li><strong>str</strong>: textos (ex: "Python")</li>
+        <li><strong>bool</strong>: verdadeiro ou falso (True ou False)</li>
+    </ul>
+    <div class="code">
+        <code>
+            inteiro = 8<br>
+            decimal = 3.5<br>
+            texto = "Python"<br>
+            logico = False
+        </code>
+    </div>
+<h2>Entrada de Dados com <code>input()</code></h2>
+<p class="text-introduction">
+    A função <code>input()</code> permite que o programa receba informações do usuário. Quando usamos <code>input()</code>, o programa para e espera o usuário digitar algo.
+</p>
+<div class="code">
+    <code>
+        nome = input("Qual é o seu nome? ")<br>
+        print("Olá, " + nome + "!")
+    </code>
+</div>
+<p class="text-introduction">
+    Nesse exemplo, o usuário digita o nome e o computador responde com uma saudação personalizada. O que for digitado é sempre considerado um <strong>texto</strong> (str), mesmo que seja um número.
+</p>
+<div class="code">
+    <code>
+        idade = input("Qual é a sua idade? ")<br>
+        print("Você tem " + idade + " anos.")
+    </code>
+</div>
+<h2>Estruturas de <span class="Codepythonspan">Seleção</span></h2>
+    <p class="text-introduction">
+        As estruturas de seleção permitem que o programa tome decisões com base em condições.
+    </p>
+    <div class="code">
+        <code>
+            clima = "chovendo"<br>
+            if clima == "chovendo":<br>
+                print("Pegue o guarda-chuva!")<br>
+            elif clima == "frio":<br>
+                print("Pegue o casaco")<br>
+            else:<br>
+                print("Aproveite o dia!")
+        </code>
+    </div>
+
+<h2>Estruturas de <span class="Codepythonspan">Repetição</span></h2>
+    <p class="text-introduction">
+        Essas estruturas fazem com que um trecho de código se repita.
+    </p>
+    <ul>
+        <li><strong>for</strong>: repete um número conhecido de vezes.</li>
+        <li><strong>while</strong>: repete enquanto uma condição for verdadeira.</li>
+    </ul>
+    <div class="code">
+        <code>
+            for i in range(5):<br>
+                print("Bom dia!")
+        </code>
+    </div>
+
+<h2>Listas (Vetores) e <span class="Codepythonspan">Matrizes</span></h2>
+    <p class="text-introduction">
+        Listas armazenam vários valores em uma única variável. Matrizes são listas dentro de listas, organizadas em linhas e colunas.
+    </p>
+    <div class="code">
+        <code>
+            frutas = ["maçã", "banana", "laranja"]<br>
+            print(frutas[0])  # Mostra "maçã"
+        </code>
+    </div>
+    <div class="code">
+        <code>
+            sala = [
+                ["Ana", "Bruno"],
+                ["Carlos", "Duda"]
+            ]<br>
+            print(sala[0][1])  # Mostra "Bruno"
+        </code>
+    </div>
+
+<h2>Funções e <span class="Codepythonspan">Procedimentos</span></h2>
+    <p class="text-introduction">
+        Funções são blocos de código que realizam tarefas específicas. Procedimentos são funções que não retornam valores, apenas executam ações.
+    </p>
+    <div class="code">
+        <code>
+            def diga_ola():<br>
+                print("Olá! Tudo bem?")<br>
+            diga_ola()
+        </code>
+    </div>
+    <div class="code">
+        <code>
+            def somar(a, b):<br>
+                print(a + b)<br>
+            somar(3, 4)  # Vai mostrar 7
+        </code>
+    </div>
+
+<h2>Tratamento de <span class="Codepythonspan">Exceções</span></h2>
+    <p class="text-introduction">
+        Às vezes ocorrem erros no programa. O tratamento de exceções evita que o programa pare inesperadamente.
+    </p>
+    <div class="code">
+        <code>
+            try:<br>
+                numero = int(input("Digite um número: "))<br>
+                print(10 / numero)<br>
+            except:<br>
+                print("Erro! Número inválido ou divisão por zero.")
+        </code>
+    </div>
+
+<h2><span class="Codepythonspan">Fim</span></h2>
+    <p class="text-introduction">
+        Parabéns por chegar até aqui! Continue praticando, explore novos conceitos e não tenha medo de errar. Programar é um processo de aprendizado contínuo.
+    </p>
+
+{% endblock %}

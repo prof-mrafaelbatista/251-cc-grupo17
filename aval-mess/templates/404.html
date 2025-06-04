@@ -1,0 +1,11 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+<h2><span class="Codepythonspan"> X Termo</span> não encontrado no glossário.</h2>
+    <p class="text-introduction">Deseja tentar novamente?</p>
+    <form action="{{ url_for('excluir_termo') }}" method="get">
+        <button type="submit">Tentar novamente</button>
+    </form>
+    <form action="{{ url_for('glossario') }}" method="get">
+        <button type="submit">Voltar ao glossário</button>
+    </form>
+{% endblock %}

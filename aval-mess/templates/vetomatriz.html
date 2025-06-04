@@ -1,0 +1,119 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+<div class="introduction">
+    <h1>Trabalhando com <span class="Codepythonspan">Vetores</span> e <span class="Codepythonspan">Matrizes</span> em Python</h1>
+    <p class="text-introduction">
+        Ao desenvolver programas, muitas vezes precisamos guardar e organizar vários dados de forma eficiente. É aí que entram os vetores e as matrizes! Eles são estruturas que nos ajudam a armazenar coleções de valores de maneira organizada e prática.
+    </p>
+    <p class="text-introduction">
+        Em Python, essas estruturas são representadas por listas. Com elas, conseguimos guardar diversos valores em uma única variável, o que facilita a manipulação, a leitura e a escrita de dados. Vamos entender como funcionam essas estruturas na prática!
+    </p>
+</div>
+
+<h2><span class="Codepythonspan">Vetor</span></h2>
+<p class="text-introduction">
+    Podemos imaginar um vetor como uma fila de caixas, onde cada caixa guarda um valor. Essas caixas estão organizadas uma após a outra, e cada uma tem um número de identificação (chamado de índice) que começa em 0.
+</p>
+<p class="text-introduction">
+    Em Python, representamos um vetor usando uma lista comum, como neste exemplo:
+</p>
+<div class="code">
+    <code>
+        numeros = [10, 20, 30, 40, 50]<br>
+        print(numeros[0])  # Acessa o primeiro elemento<br>
+        print(numeros[-1]) # Acessa o último elemento
+    </code>
+</div>
+<p class="text-introduction">
+    Podemos acessar cada item individualmente usando colchetes e o índice desejado. O índice 0 acessa o primeiro valor, 1 o segundo, e assim por diante. Também podemos usar índices negativos para contar de trás para frente.
+</p>
+
+<h2>Percorrendo um vetor com <span class="Codepythonspan">for</span></h2>
+<p class="text-introduction">
+    Para trabalhar com todos os elementos de um vetor, é muito comum usar um laço <code>for</code>. Com ele, conseguimos percorrer item por item, o que é útil para exibir valores, fazer contas ou aplicar regras.
+</p>
+<div class="code">
+    <code>
+        frutas = ["maçã", "banana", "uva"]<br>
+        for fruta in frutas:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print("Eu gosto de", fruta)
+    </code>
+</div>
+<p class="text-introduction">
+    Esse exemplo mostra como podemos interagir com os elementos da lista. A cada repetição, a variável <code>fruta</code> assume o valor de um item do vetor <code>frutas</code>.
+</p>
+
+<h2>Modificando um vetor</h2>
+<p class="text-introduction">
+    Uma das vantagens das listas em Python é a flexibilidade. Podemos adicionar novos elementos, remover os que não queremos mais, ou até substituir valores existentes de forma muito simples.
+</p>
+<div class="code">
+    <code>
+        lista = [1, 2, 3]<br>
+        lista.append(4)  # Adiciona o número 4 no final da lista<br>
+        lista.remove(2)  # Remove o número 2 da lista<br>
+        lista[0] = 10    # Substitui o primeiro elemento pelo valor 10<br>
+        print(lista)
+    </code>
+</div>
+<p class="text-introduction">
+    Esses métodos ajudam a manter a lista sempre atualizada conforme a necessidade do programa.
+</p>
+
+<h2><span class="Codepythonspan">Matriz</span></h2>
+<p class="text-introduction">
+    Se um vetor é uma linha de dados, uma matriz pode ser vista como uma tabela, com linhas e colunas. Imagine uma planilha do Excel — aquilo é uma matriz! Em Python, representamos esse tipo de estrutura usando listas de listas.
+</p>
+<div class="code">
+    <code>
+        matriz = [<br>
+            [1, 2, 3],<br>
+            [4, 5, 6],<br>
+            [7, 8, 9]<br>
+        ]<br>
+        print(matriz[0][0])  # Primeiro elemento (linha 0, coluna 0)<br>
+        print(matriz[1][2])  # Terceiro elemento da segunda linha
+    </code>
+</div>
+<p class="text-introduction">
+    Cada elemento da matriz é acessado com dois índices: o primeiro representa a linha, e o segundo a coluna. Assim, conseguimos localizar qualquer valor dentro dessa "tabela".
+</p>
+
+<h2>Percorrendo uma matriz</h2>
+<p class="text-introduction">
+    Para ler todos os dados de uma matriz, usamos dois laços <code>for</code>: o primeiro percorre as linhas e o segundo percorre os elementos de cada linha. É como ler linha por linha de uma tabela.
+</p>
+<div class="code">
+    <code>
+        for linha in matriz:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;for elemento in linha:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(elemento, end=" ")<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print()
+    </code>
+</div>
+<p class="text-introduction">
+    A função <code>print()</code> no final do primeiro laço serve para pular uma linha e manter o formato de tabela na hora de imprimir.
+</p>
+
+<h2>Construindo uma matriz com <span class="Codepythonspan">input</span></h2>
+<p class="text-introduction">
+    Também podemos criar matrizes dinamicamente, pedindo ao usuário que insira os valores. Isso torna nossos programas mais interativos e personalizados.
+</p>
+<div class="code">
+    <code>
+        linhas = 2<br>
+        colunas = 3<br>
+        matriz = []<br>
+        for i in range(linhas):<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;linha = []<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;for j in range(colunas):<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valor = int(input(f"Digite o valor para [{i}][{j}]: "))<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;linha.append(valor)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;matriz.append(linha)
+    </code>
+</div>
+<p class="text-introduction">
+    No final desse código, teremos uma matriz montada com os valores que o usuário informou, prontos para serem processados pelo programa.
+</p>
+
+{% endblock %}

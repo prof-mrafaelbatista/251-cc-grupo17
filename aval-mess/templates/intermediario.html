@@ -1,0 +1,175 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+
+<div class="introduction">
+    <h1>Introdução à Programação com <span class="Codepythonspan">Python</span></h1>
+    <p class="text-introduction">
+        Esta seção foi cuidadosamente elaborada para introduzir você, estudante de tecnologia com conhecimentos intermediários, aos principais fundamentos da linguagem Python. O objetivo é não apenas apresentar os conceitos básicos, mas também proporcionar uma transição fluida para tópicos mais avançados. A abordagem combina teoria clara e prática aplicada, visando consolidar sua base de forma sólida e eficiente.
+    </p>
+    <p class="text-introduction">
+        Python é uma linguagem de alto nível, interpretada, de tipagem dinâmica e fortemente influenciada por paradigmas como o orientado a objetos e funcional. Sua sintaxe limpa e legível, aliada a uma vasta gama de bibliotecas e frameworks, faz dela uma excelente escolha tanto para iniciantes quanto para profissionais experientes. De aplicações web a sistemas embarcados, passando por ciência de dados e inteligência artificial, Python é uma ferramenta poderosa e versátil.
+    </p>
+</div>
+
+<h2>Conceitos <span class="Codepythonspan">Iniciais</span></h2>
+<p class="text-introduction">
+    Programar consiste em expressar soluções computacionais para problemas reais por meio de uma linguagem formal compreendida pela máquina. No caso do Python, essa linguagem é particularmente acessível graças à sua semântica intuitiva. Cada linha de código representa uma instrução que o interpretador Python executará, respeitando regras lógicas e sintáticas previamente definidas.
+</p>
+<p class="text-introduction">
+    Para executar seus programas, você pode utilizar uma IDE como PyCharm ou VS Code, ou até mesmo ambientes interativos como o Jupyter Notebook, que favorecem o aprendizado iterativo e a prototipação rápida. A seguir, um exemplo clássico que imprime uma mensagem na saída padrão:
+</p>
+<div class="code">
+<code>
+    print("Olá, mundo!")
+</code>
+</div>
+<p class="text-introduction">
+    A função <code>print()</code> é essencial para a depuração e comunicação de dados com o usuário. Ela envia informações para a saída padrão (geralmente o terminal), sendo uma das ferramentas mais utilizadas em qualquer projeto de software.
+</p>
+
+<h2>Comandos <span class="Codepythonspan">Básicos</span></h2>
+<p class="text-introduction">
+    A manipulação de dados em Python envolve o uso de diferentes tipos primitivos, cada um adequado a um determinado contexto computacional. Compreender esses tipos é crucial para desenvolver algoritmos precisos e eficientes:
+</p>
+<ul>
+    <li><strong>int</strong>: representa números inteiros, positivos ou negativos, sem parte decimal.</li>
+    <li><strong>float</strong>: representa números reais, com ponto flutuante, usado em cálculos que exigem precisão decimal.</li>
+    <li><strong>str</strong>: cadeias de caracteres utilizadas para representar texto.</li>
+    <li><strong>bool</strong>: tipo lógico que assume os valores <code>True</code> ou <code>False</code>, fundamentais para estruturas de controle.</li>
+</ul>
+<div class="code">
+<code>
+    idade = 21<br>
+    nome = "Carlos"<br>
+    ativo = True<br>
+    saldo = 156.75
+</code>
+</div>
+<p class="text-introduction">
+    A declaração e atribuição de variáveis em Python é direta, e o tipo de dado é inferido automaticamente pelo interpretador. Essa flexibilidade, entretanto, exige atenção para evitar erros em tempo de execução, especialmente em operações entre tipos diferentes.
+</p>
+
+<h2>Função <span class="Codepythonspan">input()</span></h2>
+<p class="text-introduction">
+    A função <code>input()</code> permite a interação com o usuário por meio da captura de dados inseridos no terminal. Ao utilizar essa função, o programa é temporariamente interrompido até que o usuário forneça uma entrada. O valor retornado é sempre do tipo string, sendo necessário fazer conversões explícitas para outros tipos quando apropriado.
+</p>
+<div class="code">
+<code>
+    nome = input("Digite seu nome: ")<br>
+    print("Olá,", nome)
+</code>
+</div>
+<p class="text-introduction">
+    Para capturar dados numéricos, é comum fazer a conversão com <code>int()</code> ou <code>float()</code>, dependendo da necessidade. Exemplo:
+    <code>idade = int(input("Digite sua idade: "))</code>. Caso a entrada não seja numérica, um erro do tipo <code>ValueError</code> será gerado.
+</p>
+
+<h2>Estruturas de <span class="Codepythonspan">Seleção</span></h2>
+<p class="text-introduction">
+    As estruturas condicionais permitem controlar o fluxo de execução do programa com base em expressões lógicas. Utilizando os comandos <code>if</code>, <code>elif</code> e <code>else</code>, podemos criar bifurcações e tomadas de decisão conforme o estado dos dados.
+</p>
+<div class="code">
+<code>
+    temperatura = 30<br>
+    if temperatura > 25:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print("Dia quente")<br>
+    elif temperatura > 15:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print("Clima agradável")<br>
+    else:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print("Dia frio")
+</code>
+</div>
+<p class="text-introduction">
+    As condições são avaliadas sequencialmente até que uma delas seja satisfeita. Caso nenhuma se aplique, o bloco <code>else</code> é executado. Esse recurso é essencial para tornar o comportamento do programa adaptativo e responsivo às diversas entradas possíveis.
+</p>
+
+<h2>Estruturas de <span class="Codepythonspan">Repetição</span></h2>
+<p class="text-introduction">
+    Repetições são fundamentais para automatizar tarefas repetitivas. Em Python, o comando <code>for</code> é utilizado com sequências e iteráveis, enquanto <code>while</code> depende de uma condição booleana que precisa ser verdadeira para manter o laço em execução.
+</p>
+<div class="code">
+<code>
+    for i in range(3):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print("Repetição", i)
+</code>
+</div>
+<div class="code">
+<code>
+    x = 0<br>
+    while x &lt; 3:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print(x)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;x += 1
+</code>
+</div>
+<p class="text-introduction">
+    A escolha entre <code>for</code> e <code>while</code> depende do controle que se deseja exercer sobre o laço. Quando a quantidade de iterações é conhecida, <code>for</code> é a escolha ideal. Quando é necessário iterar até que uma condição seja satisfeita, utiliza-se <code>while</code>.
+</p>
+
+<h2>Vetores e <span class="Codepythonspan">Matrizes</span></h2>
+<p class="text-introduction">
+    Em Python, listas (<code>list</code>) são estruturas flexíveis e dinâmicas que permitem armazenar coleções de dados de qualquer tipo. Para representar matrizes, utilizamos listas aninhadas (listas dentro de listas), o que permite simular estruturas bidimensionais com facilidade.
+</p>
+<div class="code">
+<code>
+    frutas = ["maçã", "banana", "laranja"]<br>
+    print(frutas[0])  # Saída: maçã
+</code>
+</div>
+<div class="code">
+<code>
+    matriz = [[1, 2], [3, 4]]<br>
+    print(matriz[1][0])  # Saída: 3
+</code>
+</div>
+<p class="text-introduction">
+    O acesso aos elementos se dá por meio de índices, iniciando do zero. Essa estrutura é amplamente utilizada em algoritmos, manipulação de dados e representações geométricas em computação gráfica.
+</p>
+
+<h2>Funções e <span class="Codepythonspan">Procedimentos</span></h2>
+<p class="text-introduction">
+    Funções são blocos de código nomeados e reutilizáveis, definidos com <code>def</code>. Elas podem ou não retornar valores e ajudam a modularizar o código, tornando-o mais organizado, reutilizável e legível. Procedimentos são funções que não retornam valor explícito, apenas executam ações.
+</p>
+<div class="code">
+<code>
+    def saudacao():<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print("Bem-vindo ao Python!")<br><br>
+    saudacao()
+</code>
+</div>
+<div class="code">
+<code>
+    def soma(a, b):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return a + b<br><br>
+    resultado = soma(3, 5)<br>
+    print(resultado)
+</code>
+</div>
+<p class="text-introduction">
+    Funções favorecem a reutilização de código e facilitam a manutenção de sistemas maiores. Elas também são o ponto de partida para a adoção de princípios mais avançados, como programação funcional e orientação a objetos.
+</p>
+
+<h2>Tratamento de <span class="Codepythonspan">Exceções</span></h2>
+<p class="text-introduction">
+    O tratamento de exceções é um mecanismo robusto que permite lidar com erros durante a execução do programa sem interromper seu funcionamento. Utilizando os blocos <code>try</code>, <code>except</code> e opcionalmente <code>finally</code>, podemos capturar falhas específicas e definir comportamentos apropriados para cada tipo de erro.
+</p>
+<div class="code">
+<code>
+    try:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;numero = int(input("Digite um número: "))<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print(10 / numero)<br>
+    except ZeroDivisionError:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print("Não é possível dividir por zero.")<br>
+    except ValueError:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print("Entrada inválida. Digite um número.")
+</code>
+</div>
+<p class="text-introduction">
+    Esse recurso é fundamental para a construção de sistemas robustos e resilientes, que devem operar com segurança mesmo em cenários inesperados.
+</p>
+
+<h2><span class="Codepythonspan">Encerramento</span></h2>
+<p class="text-introduction">
+    Dominar os fundamentos apresentados nesta seção representa um marco importante na sua jornada como desenvolvedor. O próximo passo envolve a prática intensiva, exploração de bibliotecas especializadas e a construção de projetos que desafiem e aprofundem sua compreensão. Continue estudando, experimentando e ampliando seus horizontes com Python. A verdadeira maestria vem com o tempo, com a prática deliberada e com o entusiasmo por aprender continuamente.
+</p>
+
+{% endblock %}

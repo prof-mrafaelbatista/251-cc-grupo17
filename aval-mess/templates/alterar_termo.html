@@ -1,0 +1,23 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+<h1>Alterar <span class="Codepythonspan">Termo</span></h1>
+
+<form action="{{ url_for('trocar_termo')}}" method="post">
+<div class="mb-3">
+<label for="termo" class="form-label">Insira Termo</label>
+<input class="form-control" id="termo" name="termo" required>
+<div id="termoHelp" class="form-text">Termo para ser alterado.</div>
+
+<label for="novo_termo" class="form-label">Insira o Novo Termo</label>
+<input class="form-control" id="novo_termo" name="novo_termo" required>
+<div class="form-text"> Nome do termo para ser alterado.</div>
+
+</div>
+<div class="mb-3">
+<label for="nova_definicao" class="form-label">Insira a Nova Definição</label>
+<input class="form-control" id= "nova_definicao" name="nova_definicao">
+</div>
+<button type="submit" class="btn btn-primary">Alterar</button>
+</form>
+
+{% endblock %}

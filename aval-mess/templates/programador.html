@@ -1,0 +1,290 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+
+<div class="introduction">
+    <h1>Introdução Avançada à Programação em <span class="Codepythonspan">Python</span></h1>
+    <p class="text-introduction">
+        Nesta seção, exploraremos a linguagem Python de maneira aprofundada, cobrindo conceitos fundamentais e avançados essenciais para um domínio sólido e aplicação eficiente da linguagem em contextos acadêmicos e profissionais.
+    </p>
+    <p class="text-introduction">
+        Python é uma linguagem de programação multiparadigma, interpretada e de alto nível, amplamente utilizada em pesquisa, ciência de dados, desenvolvimento web, automação, e inteligência artificial, entre outros campos. Sua simplicidade sintática aliada a uma vasta biblioteca padrão e ecossistema rico a torna uma ferramenta poderosa para prototipagem rápida e produção robusta.
+    </p>
+    <p class="text-introduction">
+        Esta abordagem visa fornecer bases sólidas tanto em conceitos teóricos quanto na aplicação prática, preparando o leitor para desafios avançados em programação, análise de dados, otimização de código e desenvolvimento de sistemas complexos.
+    </p>
+</div>
+
+<h2>Fundamentos <span class="Codepythonspan">Sintáticos e Semânticos</span> do Python</h2>
+<p class="text-introduction">
+    Python possui uma sintaxe clara e concisa, com ênfase na legibilidade e minimização do uso de caracteres especiais. Estruturas de código são definidas por indentação, o que impõe disciplina na organização dos programas e reduz ambiguidades.
+</p>
+<p class="text-introduction">
+    A execução de código em Python se dá em um ambiente interpretado, permitindo interação dinâmica via REPL (Read-Eval-Print Loop), facilitando testes incrementais e depuração.
+</p>
+
+<div class="code">
+<code>
+    cliente = "Empresa XYZ"<br>
+    data_geracao = datetime.now()<br>
+    saldo_anterior = Decimal("10523.457")<br>
+    saldo_atual = Decimal("11890.3295")<br>
+    diferenca = saldo_atual - saldo_anterior<br>
+
+    print(f"Relatório Financeiro - {data_geracao:%d/%m/%Y %H:%M:%S}")<br>
+    print("=" * 50)<br>
+    print(f"Cliente........: {cliente}")<br>
+    print(f"Saldo Anterior.: R$ {saldo_anterior:,.2f}")<br>
+    print(f"Saldo Atual....: R$ {saldo_atual:,.2f}")<br>
+    print(f"Variação.......: R$ {diferenca:,.2f} ({(diferenca / saldo_anterior * 100):.2f}%)")
+</code>
+</div>
+<p class="text-introduction">
+    A função <code>print()</code> é uma das mais básicas para saída de dados no console. Ela pode receber múltiplos argumentos, suporta formatação avançada e é fundamental para depuração e interação.
+</p>
+<p class="text-introduction">
+    Como fora demonstrado, a função <code>print()</code>, utilizada em conjunto de dados pre-determinados pode fornecer um relatorio financeiro em empresas, otimizando a produtividade e a analíse de dados do setor.
+</p>
+<h2>Tipos de <span class="Codepythonspan">Dados e Sistemas</span> de Tipagem</h2>
+<p class="text-introduction">
+    Python é uma linguagem de tipagem dinâmica e forte, o que significa que os tipos são inferidos em tempo de execução e a conversão automática entre tipos incompatíveis é restrita para evitar erros silenciosos.
+</p>
+<p class="text-introduction">
+    Os principais tipos básicos incluem:
+</p>
+<ul>
+    <li><strong>int:</strong> números inteiros arbitrariamente grandes, sem limite fixo de tamanho, útil para cálculos precisos e contagens.</li>
+    <li><strong>float:</strong> números de ponto flutuante em dupla precisão IEEE 754, adequados para cálculos aproximados e científicos.</li>
+    <li><strong>str:</strong> sequências imutáveis de caracteres Unicode, permitindo manipulação de texto com ampla internacionalização.</li>
+    <li><strong>bool:</strong> representação binária de valores lógicos <code>True</code> e <code>False</code>, fundamental para controle de fluxo.</li>
+</ul>
+
+<div class="code">
+<code>
+a: int = 42
+b: float = 3.14159
+c: str = "Python Avançado"
+d: bool = True
+</code>
+</div>
+<p class="text-introduction">
+    Python 3.5+ suporta anotações de tipos (type hints) que auxiliam na documentação, análise estática e ferramentas de tipagem como <code>mypy</code>.
+</p>
+
+<h2>Controle de Fluxo: <span class="Codepythonspan">Estruturas Condicionais</span></h2>
+<p class="text-introduction">
+    A decisão condicional em Python é realizada por meio das instruções <code>if</code>, <code>elif</code> e <code>else</code>, possibilitando ramificações de código baseadas em condições booleanas.
+</p>
+<p class="text-introduction">
+    Quando trabalhamos com estruturas condicionais em Python no contexto acadêmico ou científico, é essencial ir além das simples decisões lógicas
+    e entender como esses mecanismos podem ser empregados para estruturar lógica complexa, modular e sustentável.
+    Nesta seção, vamos analisar um exemplo mais robusto que utiliza:
+</p>
+<p class="text-introduction">
+    Condições compostas basicas como IF, ELIF, ELSE, e A estrutura moderna match-case (disponível a partir do Python 3.10), os match-cases substituem a quantidade enorme de ELIFs<br>
+
+</p>
+<div class="code">
+<code>
+     # Condicionais compostas com operadores lógicos<br>
+    if temp > 35 and umidade < 30:<br>
+        print("⚠️ Alerta: Risco de insolação e baixa umidade.")<br>
+    elif 20 <= temp <= 30 and 40 <= umidade <= 70:<br>
+        print("✅ Clima ideal para atividades ao ar livre.")<br>
+    elif temp < 10:<br>
+        print("🧊 Frio intenso! Vista-se bem.")<br>
+    else:<br>
+        print("ℹ️ Clima moderado. Observe a previsão do tempo.")<br>
+
+    # Estrutura match-case: substitui múltiplos elifs<br>
+    match condicao.lower():<br>
+        case "ensolarado":<br>
+            print("☀️ O dia está claro e sem nuvens.")<br>
+        case "nublado":<br>
+            print("☁️ Céu encoberto. Pode haver mudanças bruscas.")<br>
+        case "chuva":<br>
+            print("🌧️ Traga um guarda-chuva.")<br>
+        case "tempestade":<br>
+            print("⛈️ Permaneça em locais seguros.")<br>
+        case "neve":<br>
+            print("❄️ Atenção: pistas escorregadias.")<br>
+        case _:<br>
+            print("🔍 Condição atmosférica desconhecida.")<br>
+</code>
+</div>
+
+<p class="text-introduction">
+    Observação importante: operadores lógicos em Python são <code>and</code>, <code>or</code>, <code>not</code>, não <code>=</code> para comparações (usa-se <code>==</code>).
+</p>
+
+<h2>Estruturas de <span class="Codepythonspan">Repetição e Iteradores</span></h2>
+<p class="text-introduction">
+    Python oferece laços de repetição eficientes e legíveis com as estruturas <code>for</code> e <code>while</code>. O laço <code>for</code> itera sobre qualquer objeto iterável, como listas, strings, geradores e arquivos, enquanto o <code>while</code> executa enquanto a condição for verdadeira.
+</p>
+
+<div class="code">
+<code>
+alunos = ["Alice", "Bruno", "Clara", "Diego"]<br>
+notas = []<br>
+
+# Loop para coletar notas de forma dinâmica
+for aluno in alunos:<br>
+    print(f"Digite a nota de {aluno}:")<br>
+    while True:<br>
+        try:<br>
+            nota = float(input("Nota (0 a 10): "))<br>
+            if 0 <= nota <= 10:<br>
+                break<br>
+            else:<br>
+                print("⚠️ A nota deve estar entre 0 e 10.")<br>
+        except ValueError:<br>
+            print("⚠️ Digite um valor numérico válido.")<br>
+    notas.append((aluno, nota))<br>
+
+# Exibindo os resultados com índice
+print("\n📊 Resultado Final:")<br>
+for i, (aluno, nota) in enumerate(notas):<br>
+    status = "✅ Aprovado" if nota >= 7 else "❌ Reprovado"<br>
+    print(f"{i+1}. {aluno} - Nota: {nota:.1f} - {status}")<br>
+
+# Cálculo da média da turma
+media = sum(n[1] for n in notas) / len(notas)<br>
+print(f"\n🎯 Média da Turma: {media:.2f}")<br>
+
+# Exemplo de repetição com while para menu simples
+print("\n📋 Menu de Opções:")<br>
+opcao = ""<br>
+while opcao != "sair":<br>
+    opcao = input("Digite uma opção (ver notas / sair): ").lower()<br>
+    if opcao == "ver notas":<br>
+        for aluno, nota in notas:<br>
+            print(f"{aluno}: {nota}")<br>
+    elif opcao != "sair":<br>
+        print("❓ Opção inválida.")<br>
+</code>
+</div>
+
+<h2>Estruturas de Dados Compostas: <span class="Codepythonspan">Listas, Tuplas, Dicionários e Sets</span></h2>
+<p class="text-introduction">
+    Python oferece várias estruturas para armazenar coleções de dados:
+</p>
+<ul>
+    <li><strong>Listas:</strong> coleções mutáveis e ordenadas. Exemplo: Lista de Compras</li>
+    <li><strong>Tuplas:</strong> coleções imutáveis e ordenadas. Exemplo: Uma planilha excel</li>
+    <li><strong>Dicionários:</strong> coleções mutáveis, desordenadas (desde Python 3.7 mantêm ordem), que armazenam pares chave-valor. Exemplo: Um dicionário</li>
+    <li><strong>Sets:</strong> coleções mutáveis de elementos únicos e não ordenados. Exemplo: Uma ficha com categorias</li>
+</ul>
+
+<div class="code">
+<code>
+# Dados compostos: Lista de dicionários com tuplas e conjuntos<br>
+cursos = [<br>
+    {<br>
+        "nome": "Python Avançado",<br>
+        "alunos": [<br>
+            ("Alice", {8.5, 9.0, 10.0}),<br>
+            ("Bruno", {7.0, 6.5, 8.0}),<br>
+            ("Clara", {9.5, 10.0, 10.0})<br>
+        ]<br>
+    },<br>
+    {<br>
+        "nome": "Ciência de Dados",<br>
+        "alunos": [<br>
+            ("Diego", {9.0, 8.5, 9.5}),<br>
+            ("Elisa", {7.5, 8.0, 8.5}),<br>
+            ("Bruno", {6.0, 7.0, 5.5})<br>
+        ]<br>
+    }<br>
+]<br>
+
+# Função para exibir todos os cursos e alunos<br>
+def exibir_dados():<br>
+    for curso in cursos:<br>
+        print(f"\n📘 Curso: {curso['nome']}")<br>
+        for nome, notas in curso["alunos"]:<br>
+            media = sum(notas) / len(notas)<br>
+            print(f" - {nome}: Notas: {notas} | Média: {media:.2f}")<br>
+
+# Consulta cruzada: listar todos os alunos únicos matriculados<br>
+def listar_alunos_unicos():<br>
+    conjunto_alunos = set()<br>
+    for curso in cursos:<br>
+        for nome, _ in curso["alunos"]:<br>
+            conjunto_alunos.add(nome)<br>
+    print("\n👥 Alunos únicos matriculados:")<br>
+    for aluno in sorted(conjunto_alunos):<br>
+        print(f" - {aluno}")<br>
+
+# Ranking de desempenho por curso<br>
+def ranking_por_curso():<br>
+    for curso in cursos:<br>
+        print(f"\n🏆 Ranking - {curso['nome']}")<br>
+        ranking = sorted(curso["alunos"], key=lambda x: sum(x[1])/len(x[1]), reverse=True)<br>
+        for i, (nome, notas) in enumerate(ranking, 1):<br>
+            media = sum(notas) / len(notas)<br>
+            print(f"{i}. {nome} - Média: {media:.2f}")<br>
+
+# Executando o sistema<br>
+exibir_dados()<br>
+listar_alunos_unicos()<br>
+ranking_por_curso()<br>
+</code>
+</div>
+
+<h2>Funções: <span class="Codepythonspan">Definição, Parâmetros e Retorno</span></h2>
+<p class="text-introduction">
+    Funções encapsulam blocos de código reutilizáveis. Python suporta funções com parâmetros posicionais, nomeados, valores padrão, argumentos arbitrários (*args) e argumentos nomeados arbitrários (**kwargs).
+</p>
+
+<div class="code">
+<code>
+def diga_ola():
+    print("Olá! Tudo bem?")
+
+def somar(a: int, b: int) -> int:
+    return a + b
+
+diga_ola()
+resultado = somar(3, 4)
+print(f"Resultado da soma: {resultado}")
+</code>
+</div>
+
+<p class="text-introduction">
+    Anotações de tipo (type hints) auxiliam na clareza e verificação por ferramentas externas, mas não impactam na execução.
+</p>
+
+<h2>Tratamento de Exceções: <span class="Codepythonspan">Robustez e Controle de Erros</span></h2>
+<p class="text-introduction">
+    O tratamento de exceções é essencial para criar programas resilientes. Em Python, usa-se o bloco <code>try-except</code> para capturar e tratar erros em tempo de execução, evitando que a aplicação falhe abruptamente.
+</p>
+
+<div class="code">
+<code>
+try:
+    numero = int(input("Digite um número: "))
+    print(10 / numero)
+except ZeroDivisionError:
+    print("Erro: Divisão por zero não é permitida.")
+except ValueError:
+    print("Erro: Entrada inválida, digite um número inteiro.")
+except Exception as e:
+    print(f"Erro inesperado: {e}")
+</code>
+</div>
+
+<h2>Conclusão e <span class="Codepythonspan">Próximos Passos</span></h2>
+<p class="text-introduction">
+    Este material apresenta um panorama robusto dos conceitos fundamentais em Python com visão acadêmica e prática para aplicações complexas. Para avançar, recomenda-se o estudo de:
+</p>
+<ul>
+    <li>Programação orientada a objetos e design patterns</li>
+    <li>Manipulação avançada de dados com bibliotecas como NumPy, pandas e matplotlib</li>
+    <li>Programação assíncrona com <code>asyncio</code></li>
+    <li>Testes automatizados e práticas de desenvolvimento seguro</li>
+    <li>Desenvolvimento de projetos reais e contribuições em código aberto</li>
+</ul>
+<p class="text-introduction">
+    Lembre-se de que a prática contínua, aliada à leitura crítica e experimentação, é o caminho para a excelência em Python.
+</p>
+
+{% endblock %}

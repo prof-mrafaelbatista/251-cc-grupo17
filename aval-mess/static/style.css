@@ -1,0 +1,334 @@
+.text-introduction {
+  font-size: 1.2rem;
+  margin-bottom: 1.8rem;
+  line-height: 1.75;
+  color: rgb(241, 241, 241);
+  padding: 0 1rem;
+  max-width: 1200px;
+}
+
+.Codepythonspan {
+  color: rgb(35, 101, 51);
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.links a {
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  background-color: rgb(35, 101, 51);
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(35, 101, 51, 0.5);
+  margin-bottom: 1rem;
+}
+
+.links a:hover {
+  background-color: rgb(26, 76, 62);
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0, 255, 170, 0.4);
+}
+
+.introduction-sobre {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.about-team {
+  box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.team-member {
+  background: var(--bg2);
+  padding: 2rem;
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-member:hover {
+  background: rgba(35, 101, 51, 0.5);
+  border-color: rgba(35, 131, 51, 0.8);
+  border-radius: 10%;
+  height: fit-content;
+}
+
+.team-member-avatar {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 30%;
+  margin-bottom: 1rem;
+}
+
+.team-member-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0);
+}
+
+.team-member:hover img {
+  filter: saturate(1);
+}
+
+.team-member-info * {
+  text-align: center;
+  margin-top: 1.4rem;
+}
+
+.team-member-info p:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 5px rgb(135, 101, 51);
+}
+
+.team-member-socials {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: -100%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(135, 151, 51, 0.3);
+  border-radius: 1rem 0 0 1rem;
+  box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.5);
+  transition: all 3s;
+}
+
+.team-member:hover .team-member-socials {
+  right: 0;
+}
+
+.team-member-socials a {
+  padding: 1rem;
+}
+
+.social-link {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.social-link:hover {
+  color: rgba(51, 52, 52, 0.9);
+}
+
+.code {
+  background-color: rgb(0, 0, 0);
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 50%;
+}
+
+.cabecalho {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: rgb(35, 101, 51);
+  color: white;
+  border-bottom: 4px solid rgba(35, 101, 51, 0.5);
+}
+
+.foto-perfil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  transition: all 1s ease
+}
+
+.foto-perfil:hover {
+    transform: scale(1.2);
+    border: 12px solid rgba(35, 190, 100, 0.9)
+    }
+
+
+.sub-titulo {
+  font-size: 1.2rem;
+  color: rgb(235, 201, 251);
+}
+
+.sobre {
+  text-align: center;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: rgb(35, 40, 50);
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-titulo {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: rgba(55, 101, 51, 0.8);
+}
+
+.sobre-caixa {
+  margin-bottom: 2rem;
+}
+
+.sobre-paragrafo {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.conta-form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(35, 40, 50);
+  border-radius: 20%;
+}
+
+.conta-textarea {
+  resize: none;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgb(68, 68, 68);
+  background: rgb(45, 70, 50);
+  color: rgb(238, 238, 238);
+  font-size: 16px;
+  font-weight: 500;
+  outline-offset: 2px;
+  text-align: center;
+}
+
+.conta-submit-btn{
+
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: rgb(0, 190, 120);
+  color: rgb(18, 18, 18);
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.conta-submit-btn:hover{
+    transform: scale(1.03);
+    background-color: rgb(0, 140, 80, 0.5);
+
+}
+
+.sobre-user{
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: auto;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+}
+.sobre-mim{
+  font-size: 4rem;
+  padding: 12px;
+  color: rgb(235, 201, 251);
+  text-shadow: 0 0 5px rgb(135, 181, 130, 0.3);
+}
+.data-sobre{
+
+    background-color: rgb(235, 201, 251);
+    color: black;
+    max-width: 500px;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.minha-pagina {
+  width: 100%
+  margin: 2rem auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: auto;
+}
+
+.minha-pagina .chat-container {
+  width: 100%;
+  background: rgb(30, 30, 30);
+  margin: 0 auto;
+  padding: 0 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgb(0, 175, 110, 0.3);
+  max-width:1200px;
+}
+
+.minha-pagina .chat-titulo {
+  text-align: center;
+  margin-bottom: 25px;
+  color: rgb(0, 175, 110);
+}
+
+.minha-pagina .chat-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.minha-pagina .chat-textarea {
+  resize: none;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgb(68, 68, 68);
+  background: rgb(34, 34, 34);
+  color: rgb(238, 238, 238);
+  font-size: 16px;
+  font-weight: 500;
+  outline-offset: 2px;
+}
+
+.minha-pagina .chat-submit-btn {
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: rgb(0, 230, 120);
+  color: rgb(18, 18, 18);
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.minha-pagina .chat-submit-btn:hover {
+  background-color: rgb(0, 115, 30);
+}
+
+.minha-pagina .chat-resposta {
+  width: 100%;
+  margin-top: 30px;
+  background: rgb(39, 39, 39);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgb(208, 240, 240);
+  white-space: pre-wrap;
+  box-shadow: inset 0 0 10px rgb(0, 175, 110);;
+}

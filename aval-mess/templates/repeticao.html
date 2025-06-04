@@ -1,0 +1,88 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+<div class="introduction">
+    <h1>Estruturas de <span class="Codepythonspan">Repetição</span> em Python</h1>
+    <p class="text-introduction">
+        Nesta seção, vamos conhecer as estruturas de repetição da linguagem Python, que são essenciais para automatizar tarefas, percorrer coleções de dados ou executar blocos de código diversas vezes, com base em condições específicas.
+    </p>
+    <p class="text-introduction">
+        Em Python, temos algumas formas principais de repetir ações: os comandos <strong>while</strong> e <strong>for</strong>, além dos controladores <strong>break</strong> e <strong>continue</strong>, que ajudam a controlar o fluxo dessas repetições.
+    </p>
+</div>
+
+<h2>Estrutura de Repetição com <span class="Codepythonspan">while</span></h2>
+<p class="text-introduction">
+    A estrutura <code>while</code> é usada quando queremos repetir algo enquanto uma determinada condição for verdadeira.
+    Essa é uma repetição controlada por condição — ou seja, o laço só para quando a condição deixar de ser satisfeita.
+</p>
+<p class="text-introduction">
+    Ideal para situações em que não sabemos exatamente quantas vezes o bloco deverá se repetir.
+</p>
+<div class="code">
+    <code>
+        contador = 0<br>
+        while contador < 5:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print("Contando:", contador)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;contador += 1
+    </code>
+</div>
+
+<h2>Estrutura de Repetição com <span class="Codepythonspan">for</span></h2>
+<p class="text-introduction">
+    A estrutura <code>for</code> é usada quando sabemos com antecedência quantas vezes queremos repetir um bloco de código.
+    Muito usada para percorrer listas, strings, intervalos numéricos ou qualquer objeto iterável.
+</p>
+<div class="code">
+    <code>
+        for i in range(5):<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print("Valor de i:", i)
+    </code>
+</div>
+
+<h2>Usando <span class="Codepythonspan">range()</span></h2>
+<p class="text-introduction">
+    A função <code>range()</code> é comumente usada com o <code>for</code> para gerar uma sequência de números.
+    Você pode controlar o ponto de partida, o ponto final e até mesmo o passo da contagem.
+</p>
+<div class="code">
+    <code>
+        for i in range(1, 11, 2):<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print(i)
+    </code>
+</div>
+<p class="text-introduction">
+    Neste exemplo, a contagem começa em 1 e vai até 10, pulando de 2 em 2 (ou seja, imprimindo os números ímpares).
+</p>
+
+<h2>Usando <span class="Codepythonspan">break</span></h2>
+<p class="text-introduction">
+    O comando <code>break</code> serve para interromper uma repetição, mesmo que a condição ainda seja verdadeira.
+    Muito útil quando queremos sair do laço ao atingir um determinado critério.
+</p>
+<div class="code">
+    <code>
+        while True:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;texto = input("Digite algo (ou 'sair' para parar): ")<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;if texto == "sair":<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print("Você digitou:", texto)
+    </code>
+</div>
+
+<h2>Usando <span class="Codepythonspan">continue</span></h2>
+<p class="text-introduction">
+    Já o comando <code>continue</code> é usado para pular a iteração atual e voltar para o início do laço, continuando com a próxima repetição.
+</p>
+<div class="code">
+    <code>
+        for i in range(6):<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;if i == 3:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print(i)
+    </code>
+</div>
+<p class="text-introduction">
+    No exemplo acima, o número 3 não será exibido porque, quando <code>i</code> for igual a 3, o <code>continue</code> fará o programa pular para a próxima repetição sem executar o <code>print</code>.
+</p>
+
+{% endblock %}

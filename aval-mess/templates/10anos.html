@@ -1,0 +1,205 @@
+{% extends  "modelo.html" %}
+{% block conteudo %}
+
+<div class="introduction">
+    <H1>Para <span class="Codepythonspan">Crianças Novas</span></H1>
+   <p class="text-introduction">
+    Nessa seção iremos falar da programação em Python da forma mais simples possível, explicando estruturas e elementos importantes da linguagem para crianças mais novas!
+    </p>
+    <p class="text-introduction">
+        Python é como brincar de montar blocos! Com ele, podemos dar instruções para o computador fazer coisas bem legais, como contar, desenhar ou até contar histórias. Vamos aprender juntos, de um jeitinho fácil e divertido.
+    </p>
+    <p class="text-introduction">
+        Aqui, você vai se divertir e brincar com os valores de Python. Vamos usar palavras mágicas que dizem ao computador o que fazer. Você vai aprender o que são números, letras e comandos que ajudam a criar coisas incríveis!
+    </p>
+    <p class="text-introduction">
+        Não se preocupe se parecer difícil no começo. A gente vai aprender devagarzinho, com muitos exemplos e brincadeiras. Preparado para a aventura? Então vem com a gente programar com diversão!
+    </p>
+</div>
+<h2>Coisas <span class="Codepythonspan">Simples</span></h2>
+    <p class="text-introduction">
+        Imagine que você tem um amigo, vocês podem fazer muitas coisas, podem brincar juntos e se divertir bastante!
+    </p>
+    <p class="text-introduction">
+        Mas o seu amigo não fala que nem você, e para ensinar algo pra ele é bem complicado, por que ele não fala a mesma lingua que você!
+    </p>
+    <p class="text-introduction">
+        Agora imagine um dia, que você achou um caderno mágico, e seu amigo entende tudo que você escreve nele! Agora vocês podem conversar.
+    </p>
+    <p class="text-introduction">
+        A linguagem Python é esse caderninho e o computador é o seu amigo. Você pode brincar bastante com o computador, mas ele só vai entender oque você quer, se você usar o caderninho.
+    </p>
+    <p class="text-introduction">
+        Quando você está ensinando o computador a fazer algo, você está "programando". Programar algo, é dar ordens pro seu computador fazer alguma coisa
+    </p>
+    <p class="text-introduction">
+       O computador não entende tudo que a gente fala, então usamos a linguagem chamada Python, que é uma das mais fáceis e legais de aprender. Com ela, você pode:
+        Falar com o computador, Criar joguinhos, Desenhar com códigos, Fazer o computador contar histórias e até tocar sons!
+    </p>
+    <div class = "code">
+    <code>
+        print('Olá Mundo')
+    </code>
+    </div>
+    <p class="text-introduction">
+        Se colocassemos esse codigo para o computador ler, eles nos responderia "Olá, Mundo"!
+    </p>
+    <p class="text-introduction">
+        o "print" que escrevemos, faz com que o computador entenda que queremos que ele escreva algo pra nos e tudo que quisermos que apareça, tem que vir entre () e com aspas ""
+    </p>
+    <p class="text-introduction">
+        Agora, para podermos transformar oque escrevemos em comandos pro computador, precisamos usar uma IDE, imagine a IDE como tudo que você vai usar para escrever no caderno.
+    </p>
+    <p class="text-introduction">
+        A IDE tem o papel do seu caderno, ela tem seus lápis de escrever, ela pode até ter algumas dicas para quando você esquecer como são as palavras de comando!
+    </p>
+    <p class="text-introduction">
+    Algumas IDEs bem famosas são o Visual Code Studio e o PyCharm, para nossa linguagem, elas são as melhores de escrever!
+    </p>
+<h2>Comandos <span class="Codepythonspan">Básicos</span></h2>
+    <p class="text-introduction">
+        Nos temos algumas coisas que precisa aprender antes de se divertir mais com Python, elas alguns comandos e tipos de coisas como o print, que são o começo da linguagem Python
+    </p>
+    <p class="text-introduction">
+        Temos o Print, que já foi mostrado aqui, ele é como mandamos o computador escrever uma coisa pra nos, e, ao apertar play, ele vai escrever oque queremos
+    </p>
+    <div class = "code">
+    <code>
+        print('Olá Mundo')
+    </code>
+    </div>
+    <p class="text-introduction">
+        O símbolo # é como um cochicho pra si mesmo. O computador não lê o que está escrito depois dele, é só para você lembrar de algo.
+    </p>
+    <div class = "code">
+    <code>
+        # python é muito legal!
+    </code>
+    </div>
+    <p class="text-introduction">
+        Os valores são uma forma de separar por tipo cada coisa. Por exemplo, A laranja é uma fruta, já o brocolis é um verdura, os dois são comidas, mas são tipos diferentes
+    </p>
+    <p class="text-introduction">
+        No caso do Python, temos 4 tipo de valores para separas coisas:
+    </p>
+    <ul>
+        <li>int: Usamos para numeros inteiros como 1,2,3 (ex: Você tem <span class="Codepythonspan">2</span> maçãs) </li>
+
+        <li>float: número quebrados, como 2.5, 3.14 (ex: Um balão custa <span class="Codepythonspan">6.50</span> reais)</li>
+
+        <li>str: palavras entre aspas (ex: <span class="Codepythonspan">"Cachorros"</span>)</li>
+
+        <li> bool: verdadeiro ou falso, True ou False (ex: Se te perguntam se 1 + 1 = 3, você responde <span class="Codepythonspan">False</span>)</li>
+    </ul>
+    <div class = "code">
+    <code>
+        int = 8
+        float = 3.5
+        str = "cachorro"
+        bool = False
+    </code>
+    </div>
+    <h2>Estruturas de <span class="Codepythonspan">Seleção</span></h2>
+    <p class="text-introduction">
+        Agora vamos falar de estruturas de seleção, que é quando um computador faz uma escolha do que fazer, dependendo da situação
+    </p>
+    <p class="text-introduction">
+       Existem três tipos de seleção. "IF"': Que seria o "Se" algo acontecer, "ELSE": É o "Senão", que se o IF não estiver acontecendo, o ELSE que ocorre no lugar. Porém, também existe o "ELIF": Que seria uma escolha diferente de IF e de ELSE
+    </p>
+    <div class = "code">
+    <code>
+    frio = False
+    chovendo = True<br>
+
+        if chovendo:
+            print("Pegue o guarda-chuva!")<br>
+        elif chovendo = False and frio = True:
+            print("Pegue o casaco")<br>
+        else:
+            print("Pode brincar no parque!")
+    </code>
+    </div>
+<h2>Estruturas de <span class="Codepythonspan">Repetição</span></h2>
+    <p class="text-introduction">
+        Agora vamos falar de estruturas de repetição, é quando o computador repete uma coisa várias vezes. É como uma música que repete o refrão!
+    </p>
+    <p class="text-introduction">
+       Existem dois tipos de repetiçao. "WHILE": Enquanto algo for verdade, vai-se ficar repetindo o comando, "FOR": Só vai repetir pelo número delimitado de vezes
+    </p>
+    <div class = "code">
+    <code>
+        for i in range(5):<br>
+        print("Bom dia!")
+    </code>
+    </div>
+<h2>Vetores e <span class="Codepythonspan">Matrizes</span></h2>
+    <p class="text-introduction">
+        Os vetores e as matrizes são usados para organizar coisas. Imagine um vetor como uma lista dos seus brinquedos, para puxar o primeiro brinquedo, você pede o brinquedo na posição 1.
+    </p>
+    <p class="text-introduction">
+       Já as matrizes são como uma lista de listas, você distribui ela em linhas e colunas, pode imaginar ela como um mapa da sua sala, você senta na terceira cadeira, da quarta fileira, a forma que essa organização é distribuida é chamada de Matriz
+    </p>
+    <div class = "code">
+    <code>
+        #vetor, distribuido em lista<br>
+        frutas = ["maçã", "banana", "laranja"]<br>
+        print(frutas[0])  # Mostra "maçã"
+    </code>
+    </div>
+    <div class = "code">
+    <code>
+        #matriz, distribuida com linhas e colunas<br>
+        sala = [
+        ["Ana", "Bruno"],
+        ["Carlos", "Duda"]]<br>
+
+        print(sala[0][1])  # Mostra "Bruno"
+    </code>
+    </div>
+<h2>Funções e <span class="Codepythonspan">Procedimentos</span></h2>
+    <p class="text-introduction">
+        Criar uma Função ou um Procedimento é deixar algo pronto, imagine que sua função faz um bolo, sempre que você quiser um bolo, é só ativar a função e ele será feito!
+    </p>
+    <div class = "code">
+    <code>
+        def diga_ola():<br>
+        print("Olá! Tudo bem?")<br>
+
+        diga_ola()  # Chamando a função
+    </code>
+    </div>
+    <p class="text-introduction">
+       Sua função também pode ser organizada com procedimentos, que são passo a passos para realizar oque você quer. Por exemplo, se sua função for somar 1 + 1, você precisa colocar que ela irá somar 1 + 1 e pedir que ela dê o resultado
+    </p>
+    <div class = "code">
+    <code>
+        def somar(a, b):<br>
+        print(a + b)<br>
+
+        somar(3, 4)  # Vai mostrar 7
+    </code>
+    </div>
+    <h2>Tratando as <span class="Codepythonspan">Exceções</span></h2>
+    <p class="text-introduction">
+        As vezes, podemos encontrar alguns erros quando estamos programando e nos precisamos nos preparar para quando isso acontecer. O tratamento de exceções é como um plano B para quando der errado!
+    </p>
+    <p class="text-introduction">
+        Por exemplo, se eu não tenho nenhum doce e quiser dividir com meus amigos, não tem como, por que é impossível dividir zero. Logo, ao criar uma exceção, você faz um plano B para suas situações de problema.
+    </p>
+    <div class = "code">
+    <code>
+        try:<br>
+        numero = int(input("Digite um número: "))<br>
+        print(10 / numero)<br>
+        except:<br>
+        print("Opa! Não dá pra dividir por zero ou digitar letra.")
+    </code>
+    </div>
+    <p class="text-introduction">
+        Oque está acontecendo é simples, o Try está dizendo "tente fazer isso aqui", já o except fala "Se não conseguir fazer aquilo, faça isso aqui"
+    </p>
+    <h2><span class="Codepythonspan">Fim</span></h2>
+    <p class="text-introduction">
+        Esperamos que tenha entendido e gostado bastante do que viu aqui! Sinta-se a vontade pra checar o glossário e falar com a I.A, e lembre-se! Nunca deixe de estudar.
+    </p>
+{% endblock %}
