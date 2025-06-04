@@ -5,7 +5,7 @@ import requests
 
 
 
-gemini_api_key = "AIzaSyAaLsRpsgd6j_r-k3VbiUA_we7bPBY7s9w"
+gemini_api_key = "api_key"
 genai.configure(api_key=gemini_api_key)
 model = genai.GenerativeModel("gemini-1.5-flash")
 
