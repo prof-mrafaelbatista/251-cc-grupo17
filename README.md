@@ -1,3 +1,9 @@
+GRUPO: 
+- Gabriel Gonçalves
+- -Denise Virgilío
+- Suedsonn
+- Guilherme Rodrigues
+
 
 Plataforma de Aprendizado de Programação com Flask e Gemini AI
 
